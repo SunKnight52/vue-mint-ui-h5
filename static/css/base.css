@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Microsoft YaHei";
+}
+    a {
+        text-decoration: none;
+    }
+    ul,li {
+        list-style: none;
+    }
+    .hide {
+        display: none;
+    }
+    .show {
+        display: block;
+    }
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
+    .clearfix:after {
+  display: block;
+  content: "\200B";
+  clear: both;
+  height: 0;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+}
