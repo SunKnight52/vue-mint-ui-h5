@@ -11,18 +11,18 @@ export default {
             listItem: [
                 {
                     name: "设置",
-                    icon: "../../../static/img/icon_shangjia.png",
+                    icon: require("../../static/img/icon_shangjia.png"),
                     slot:"哈哈",
                 },
                 {
                     name: "商家驻",
-                    icon: "../../../static/img/icon_shangjia.png" ,
+                    icon: require("../../static/img/icon_shangjia.png"),
                     return:1,
                     slot:"哈哈哈"
                 },
                  {
                     name: "商家驻",
-                    icon: "../../../static/img/icon_shangjia.png" ,
+                    icon: require("../../static/img/icon_shangjia.png") ,
                     return:1,
                     slot:"哈哈哈"
                 }

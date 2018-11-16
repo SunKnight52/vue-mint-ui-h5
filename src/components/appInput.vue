@@ -1,22 +1,27 @@
 <template>
 <!-- 
-    icon:单元格左侧图标
+    icon:单元格左侧图标(废弃)
     phold:input的placehold
     title:图标右侧标题
     verify:右侧文字,但当文字时'获取验证码'时,url无效
     url:右侧文字链接
+    slot:单元格左侧,可填图标
  -->
     <div>
         <div class="form_list">
             <div class="list_left">
-                <img :src="icon" v-if="icon" alt=""><span>{{title}}</span>
+                <slot></slot>
+               <!-- <img :src="icon" v-if="icon" alt=""> -->
+                <span>{{title}}</span>
             </div>
             <input type="text" :placeholder="phold" @focus="onfocue" @blur="onfocue" v-model="inputs" :style="verify?'paddingRight:28vw':'paddingRight:10vw'">
             <div class="del"><span v-if="inpu" @click="del">X</span>
                 <router-link tag="a" style="marginLeft:4vw" :to="url" v-if="verify&&verify!='获取验证码'&&url">{{verify}}</router-link>
-                <span  v-if="verify=='获取验证码'" @click="verifys">{{verify}}</span>
+                <span  v-if="verify=='获取验证码'" style="marginLeft:4vw" @click="verifys">{{verify}}</span>
             </div>
+           
         </div>
+         <div>{{inputs*100/938}}</div>
     </div>
 </template>
 <script>
@@ -48,13 +53,11 @@ export default {
             let d =e.currentTarget;
             if(that.ver){
             $(d).text("重新获取(10)");
-
             }
             if(that.ver){
             let c = setInterval(function(){
                 that.ver=false;
                 if(a==0){
-                   
                     clearInterval(c)
                     $(d).text("获取验证码")
                      that.ver=true;

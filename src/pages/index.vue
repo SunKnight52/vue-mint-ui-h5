@@ -10,7 +10,6 @@
             <van-tabbar-item icon="gold-coin" to="/index/userInfo"> <span>我的</span>
                 <img slot="icon" slot-scope="props" :src="props.active ? icon.user.active : icon.user.normal"></van-tabbar-item>
         </van-tabbar>
-        
                 <router-view></router-view>
          
     </div>
@@ -22,20 +21,20 @@ export default {
             active: 0,
             icon: {
                 index: {
-                    normal: "../../static/img/icon_sy_h.png",
-                    active: "../../static/img/icon_shouye_l.png"
+                    normal: require("../../static/img/icon_sy_h.png"),
+                    active: require("../../static/img/icon_shouye_l.png")
                 },
                 wealth: {
-                    normal: "../../static/img/icon_cf_h.png",
-                    active: "../../static/img/icon_caiful.png"
+                    normal: require("../../static/img/icon_cf_h.png"),
+                    active: require("../../static/img/icon_caiful.png")
                 },
                 shop: {
-                    normal: "../../static/img/icon_sc_h.png",
-                    active: "../../static/img/icon_sc_l.png"
+                    normal: require("../../static/img/icon_sc_h.png"),
+                    active: require("../../static/img/icon_sc_l.png")
                 },
                 user: {
-                    normal: "../../static/img/icon_sy_h.png",
-                    active: "../../static/img/icon_shouye_l.png"
+                    normal: require("../../static/img/icon_sy_h.png"),
+                    active: require("../../static/img/icon_shouye_l.png")
                 }
             },
            

@@ -64,13 +64,13 @@ export default {
                     data: [
                         {
                             title: "团队奖励",
-                            icon: "../../static/img/icon_kjsy.png",
+                            icon: require("../../../static/img/icon_kjsy.png"),
                             main: "2018-10-9 12:06:33",
                             nub: "+93.00"
                         },
                         {
                             title: "团队奖励",
-                            icon: "../../static/img/icon_kjsy.png",
+                            icon: require("../../../static/img/icon_kjsy.png"),
                             main: "2018-10-9 12:06:33",
                             nub: "+93.00"
                         }
@@ -81,13 +81,13 @@ export default {
                     data: [
                         {
                             title: "团队奖励",
-                            icon: "../../static/img/icon_kjsy.png",
+                            icon: require("../../../static/img/icon_kjsy.png"),
                             main: "2018-10-9 12:06:33",
                             nub: "+93.00"
                         },
                         {
                             title: "团队奖励",
-                            icon: "../../static/img/icon_kjsy.png",
+                            icon: require("../../../static/img/icon_kjsy.png"),
                             main: "2018-10-9 12:06:33",
                             nub: "+93.00"
                         }
