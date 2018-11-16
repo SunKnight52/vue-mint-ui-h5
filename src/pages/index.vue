@@ -5,7 +5,7 @@
                 <img slot="icon" slot-scope="props" :src="props.active ? icon.index.active : icon.index.normal"></van-tabbar-item>
             <van-tabbar-item icon="chat" to="/index/wealth"> <span>财富</span>
                 <img slot="icon" slot-scope="props" :src="props.active ? icon.wealth.active : icon.wealth.normal"></van-tabbar-item>
-            <van-tabbar-item icon="records"> <span>商城</span>
+            <van-tabbar-item icon="records"  to="/index/concern"> <span>商城</span>
                 <img slot="icon" slot-scope="props" :src="props.active ? icon.shop.active : icon.shop.normal"></van-tabbar-item>
             <van-tabbar-item icon="gold-coin" to="/index/userInfo"> <span>我的</span>
                 <img slot="icon" slot-scope="props" :src="props.active ? icon.user.active : icon.user.normal"></van-tabbar-item>

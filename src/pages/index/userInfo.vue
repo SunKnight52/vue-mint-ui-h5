@@ -21,8 +21,7 @@
 
         <button @click="show=true">dandannd</button>
         <van-actionsheet v-model="show" cancel-text="取消" :actions="actions" @select="onSelect" />
-        <div class="barcode" v-if="barcode">
-        </div>
+        <router-view></router-view>
     </div>
 </template>
 <script>
@@ -94,15 +93,13 @@ export default {
             console.log(item);
             switch (item.name) {
                 case "拍照":
-                    console.log(1);
                     that.camera();
                     break;
                 case "从相册中选取":
-                    console.log(2);
-
+                    that.show=false;
+                    that.$router.push("/index/photo")
                     break;
                 case "扫描二维码":
-                    console.log(2);
                     that.createBarcode();
                     break;
             }

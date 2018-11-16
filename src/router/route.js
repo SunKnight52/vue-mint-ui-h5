@@ -7,6 +7,8 @@ import setPassword from "../pages/user/setPassword.vue";
 import register from "../pages/user/register.vue";
 import wealth from "../pages/index/wealth.vue";
 import userInfo from "../pages/index/userInfo.vue";
+import photo from "../pages/index/photo.vue";
+import concern from "../pages/concern.vue";
 Vue.use(Router)
 
 export default new Router({
@@ -30,6 +32,23 @@ export default new Router({
           component: userInfo,
           meta: {
             titile: "我的"
+          },
+          children: [
+            {
+              path: "/index/photo",
+              component: photo,
+              meta: {
+                titile: "选取照片"
+              },
+
+            }
+          ]
+        },
+        {
+          path: "/index/concern",
+          component: concern,
+          meta: {
+            titile: "关注用户"
           }
         },
       ]
