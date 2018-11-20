@@ -6,9 +6,11 @@ import router from './router/route'
 import store from "./vuex/vuex"
 import $ from "jquery";
 import Vant from "vant";
+import owner from "../static/js/common";
 import "vant/lib/index.css";
 import "../static/css/base.css"
 Vue.use(Vant);
+Vue.prototype.owner = owner;
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
