@@ -174,7 +174,7 @@ export default {
                 width: 46.6667vw;
                 height: 10vw;
                 color: #fff;
-                background:linear-gradient(left, #0d8df9 0%,#02d3fe 100%);;
+                background:linear-gradient(left, #0d8df9 0%,#02d3fe 100%);
                 border-radius: 5vw;
             }
         }

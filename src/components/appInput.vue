@@ -21,7 +21,6 @@
             </div>
            
         </div>
-         <div>{{inputs*100/938}}</div>
     </div>
 </template>
 <script>
