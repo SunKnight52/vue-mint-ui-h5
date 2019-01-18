@@ -1,5 +1,6 @@
 <template>
     <div class="wealth">
+        <appheader>sdsd</appheader>
                     <div class="wealth_head">
                         <div class="wealth_back">
 
@@ -18,12 +19,12 @@
                                     <p>2.3540</p>
                                 </div>
                             </div>
-                            <button>复投</button>
+                            <button @click="load">复投</button>
                             <p>*复投单独计算,按照三倍金额来增加积分</p>
                         </div>
                     </div>
                     <div class="wealth_foot">
-                        <van-tabs v-model="selet">
+                        <van-tabs v-model="selet" animated swipeable>
                             <van-tab title="奖励">
                                 <div class="list">
                                     <img src="../../../static/img/icon_rili.png" @click="time" alt="">
@@ -31,13 +32,13 @@
                                 </div>
                             </van-tab>
                             <van-tab title="释放">
-                                <div class="list">
+                                <div class="list">                                   
                                     <img src="../../../static/img/icon_rili.png" @click="time" alt="">
                                     <card :card="reword"></card>
                                 </div>
                             </van-tab>
                             <van-tab title="复投">
-                                <div class="list">
+                                <div class="list">                                    
                                     <img src="../../../static/img/icon_rili.png" @click="time" alt="">
                                     <card :card="reword"></card>
                                 </div>
@@ -51,7 +52,7 @@
 </template>
 <script>
 import card from "../../components/card";
-
+import appheader from "../../components/head";
 export default {
     data(){
         return {
@@ -97,7 +98,7 @@ export default {
         }
     },
      components: {
-        card
+        card,appheader
     },
     methods: {
         time() {
@@ -107,6 +108,9 @@ export default {
         timeOn(value){
             console.log(value)
             this.show = !this.show;
+        },
+        load(){
+            this.$toast('提示内容');
         }
     }
 }

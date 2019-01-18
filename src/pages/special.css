@@ -1,0 +1,40 @@
+.app {
+  width: 100%;
+  height: 100%;
+}
+.app .special {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: #eee url("../../static/img/beijing_wd.png") no-repeat;
+  background-size: 100%;
+}
+.app .texiao {
+  display: inline-block;
+  position: absolute;
+  width: 9.9vw;
+  height: 9.9vw;
+  border: 1px #999 solid;
+  border-radius: 50%;
+  background-color: rgba(200, 200, 200, 0.8);
+  animation: myfirst infinite alternate linear;
+  -webkit-animation: myfirst  infinite alternate linear;
+  /* Safari 与 Chrome */
+}
+@keyframes myfirst {
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -10px;
+  }
+}
+@-webkit-keyframes myfirst {
+  /* Safari 与 Chrome */
+  from {
+    margin-top: 0px;
+  }
+  to {
+    margin-top: -10px;
+  }
+}

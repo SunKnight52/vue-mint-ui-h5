@@ -4,40 +4,15 @@
 
     <button @click="closeApp">asdasdsasssa</button>
 
-    <form
-      action=""
-      id="hh"
-    >
-      <input
-        type="text"
-        name="id"
-      >
-      <input
-        type="text"
-        name="password"
-      >
-      <input
-        type="text"
-        name="phone"
-      >
+    <form action="" id="hh">
+      <input type="text" name="id">
+      <input type="text" name="password">
+      <input type="text" name="phone">
       <button @click="formsub">提交</button>
     </form>
-    <input
-      type="text"
-      name="user"
-    >
-    <app-button
-      width="200px"
-      height="50px"
-      radius="25px"
-      firstColor="#0d8df9"
-      secondColor="#02d3fe"
-    >提交</app-button>
-    <van-panel
-      title="标题"
-      desc="描述信息"
-      status="状态"
-    >
+    <input type="text" name="user">
+    <app-button width="200px" height="50px" radius="25px" firstColor="#0d8df9" secondColor="#02d3fe">提交</app-button>
+    <van-panel title="标题" desc="描述信息" status="状态">
     </van-panel>
   </div>
 </template>

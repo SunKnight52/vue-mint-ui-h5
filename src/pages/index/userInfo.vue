@@ -38,16 +38,18 @@ export default {
                     url: "/webview"
                 },
                 {
-                    name: "商家驻",
+                    name: "特效",
                     icon: require("../../../static/img/icon_shangjia.png"),
                     return: 1,
-                    slot: "哈哈哈"
+                    slot: "哈哈哈",
+                    url:"/special"
                 },
                 {
-                    name: "商家驻",
+                    name: "设备信息",
                     icon: require("../../../static/img/icon_shangjia.png"),
                     return: 1,
-                    slot: "哈哈哈"
+                    slot: "手机专用",
+                    url:"/device"
                 }
             ],
             show: false,

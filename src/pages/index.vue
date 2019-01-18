@@ -1,7 +1,7 @@
 <template>
     <div class="index">
         <van-tabbar v-model="active" class="tabbe">
-            <van-tabbar-item icon="shop"> <span>首页</span>
+            <van-tabbar-item icon="shop" to="/index/coin"> <span>首页</span>
                 <img slot="icon" slot-scope="props" :src="props.active ? icon.index.active : icon.index.normal"></van-tabbar-item>
             <van-tabbar-item icon="chat" to="/index/wealth"> <span>财富</span>
                 <img slot="icon" slot-scope="props" :src="props.active ? icon.wealth.active : icon.wealth.normal"></van-tabbar-item>
@@ -44,7 +44,6 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-@import url(./index.less);
 .index{
 
    

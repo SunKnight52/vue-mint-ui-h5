@@ -2,55 +2,29 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from "../pages/index.vue";
 import webview from "../pages/webview.vue";
+import special from "../pages/special.vue";
 import login from "../pages/user/login.vue";
 import setPassword from "../pages/user/setPassword.vue";
 import register from "../pages/user/register.vue";
 import wealth from "../pages/index/wealth.vue";
+import coin from "../pages/index/coin.vue";
 import userInfo from "../pages/index/userInfo.vue";
 import photo from "../pages/index/photo.vue";
 import concern from "../pages/concern.vue";
+import device from "../pages/device.vue";
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: "/index",
-      component: index,
-      meta: {
-        titile: "首页"
+      path: "/index", component: index, redirect: "/index/coin", meta: { title: "首页" },children: [
+        { path: "/index/wealth", component: wealth, meta: { title: "财富" } },
+        {path: "/index/coin",component: coin,meta: {title: "货币"}},
+        {path: "/index/userInfo",component: userInfo,meta: {title: "我的"},children: [
+          {path: "/index/photo",component: photo,meta: {title: "选取照片"},}]
       },
-      children: [
-        {
-          path: "/index/wealth",
-          component: wealth,
-          meta: {
-            titile: "财富"
-          }
-        },
-        {
-          path: "/index/userInfo",
-          component: userInfo,
-          meta: {
-            titile: "我的"
-          },
-          children: [
-            {
-              path: "/index/photo",
-              component: photo,
-              meta: {
-                titile: "选取照片"
-              },
-
-            }
-          ]
-        },
-        {
-          path: "/index/concern",
-          component: concern,
-          meta: {
-            titile: "关注用户"
-          }
-        },
+      {path: "/index/concern",component: concern,meta: {title: "关注用户"}
+      },
       ]
     },
     {
@@ -61,7 +35,7 @@ export default new Router({
       path: "/login",
       component: login,
       meta: {
-        titile: "登录"
+        title: "登录"
       }
     },
     {
@@ -75,14 +49,28 @@ export default new Router({
       path: "/register",
       component: register,
       meta: {
-        titile: "注册"
+        title: "注册"
       }
     },
     {
       path: "/webview",
       component: webview,
       meta: {
-        titile: "试试"
+        title: "试试"
+      }
+    },
+    {
+      path: "/special",
+      component: special,
+      meta: {
+        title: "小特效"
+      }
+    },
+    {
+      path: "/device",
+      component: device,
+      meta: {
+        title: "设备信息"
       }
     }
   ]
